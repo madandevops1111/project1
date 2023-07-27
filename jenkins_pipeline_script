@@ -1,0 +1,23 @@
+Pipeline script:
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'This is build stage'
+				  }
+			}
+		stage ('Validate'){
+		steps {
+		  echo 'This is validate stage'
+		  }
+		  }
+		stage ('Test'){
+		steps {
+		  echo 'This is test stage'
+		  }  
+		}
+		}
+	}
