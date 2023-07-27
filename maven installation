@@ -1,0 +1,41 @@
+First install Java:
+sudo apt update
+
+Install java and maven using link below:
+
+
+Step 1: Download the JDK Binaries
+
+$ wget https://download.java.net/java/GA/jdk13.0.1/cec27d702aa74d5a8630c65ae61e4305/9/GPL/openjdk-13.0.1_linux-x64_bin.tar.gz  
+$ tar -xvf openjdk-13.0.1_linux-x64_bin.tar.gz
+$ mv jdk-13.0.1 /opt/
+
+
+
+
+Step 2: Setting JAVA_HOME and Path Environment Variables
+JAVA_HOME='/opt/jdk-13.0.1'
+PATH="$JAVA_HOME/bin:$PATH"
+export PATH
+
+
+
+
+Step 3: Verify the Java Installation
+java --version
+
+
+Step 4: Now install setup Maven:
+sudo apt install maven
+
+
+
+Create sample project and run Maven.
+Link --> https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+cd my-app
+
+# Check maven version
+mvn --version
